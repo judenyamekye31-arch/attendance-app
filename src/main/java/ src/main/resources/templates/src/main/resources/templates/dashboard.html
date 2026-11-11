@@ -1,0 +1,4 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><title>Dashboard</title>
+<style>body{font-family:Arial;padding:20px;background:#f5f5f5} .box{background:white;padding:20px;border-radius:12px;max-width:400px;margin:auto} button{width:100%;padding:14px;background:#16a34a;color:white;border:none;border-radius:8px;font-size:16px}</style></head>
+<body><div class="box"><h3>Hello, <span th:text="${username}"></span></h3><p>Your Course:</p><h2 th:text="${course}"></h2><p>You only see your own course (Option B).</p>
+<form action="/start" method="post"><input type="hidden" name="username" th:value="${username}"><button>Start Session</button></form></div></body></html>
