@@ -1,0 +1,9 @@
+services:
+    - type: web
+    name: attendance-app
+    env: java
+    buildCommand: mvn clean package -DskipTests
+    startCommand: java -jar target/attendance-app-1.0.0.jar
+    envVars:
+            - key: PORT
+        value: 10000
