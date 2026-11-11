@@ -1,0 +1,4 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><title>Student</title>
+<style>body{font-family:Arial;padding:20px;background:#f5f5f5} .box{background:white;padding:20px;border-radius:12px;max-width:400px;margin:auto} input{width:100%;padding:12px;margin:8px 0;border:1px solid #ddd;border-radius:8px} button{width:100%;padding:12px;background:#2563eb;color:white;border:none;border-radius:8px}</style></head>
+<body><div class="box"><h2>Mark Attendance</h2><h3 th:text="${course}"></h3><p style="color:green" th:text="${success}"></p><p style="color:red" th:text="${error}"></p>
+<form action="/mark" method="post"><input name="studentId" placeholder="Your Student ID / Name" required><input name="otp" placeholder="Enter OTP from lecturer" required><input type="hidden" name="course" th:value="${course}"><button>Mark Present</button></form></div></body></html>
